@@ -1,12 +1,12 @@
 import math
 
+# What is the largest prime factor of the number 600851475143 ?
 def problem3():
-  print "What is the largest prime factor of the number 600851475143 ?"
-  print largest_prime_factor(600851475143)
+  return largest_prime_factor(600851475143)
 
+# Find the largest palindrome made from the product of two 3-digit numbers.
 def problem4():
-  print "Find the largest palindrome made from the product of two 3-digit numbers."
-  print largest_palindrome_product()
+  return largest_palindrome_product()
 
 
 
