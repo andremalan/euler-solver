@@ -8,6 +8,19 @@ def problem3():
 def problem4():
     return largest_palindrome_product()
 
+#What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+def problem5():
+    total = 1
+    primes = generate_primes(20) 
+    for prime in primes:
+        i = 1
+        while True:
+            if pow(prime, i) > 20:
+                total = total * pow(prime,i-1)
+                break
+            else:
+                i+=1
+    return total
 
 
 
