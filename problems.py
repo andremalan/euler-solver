@@ -1,3 +1,22 @@
+import math
+
+def problem3():
+  print largest_prime_factor(600851475143)
+
+def problem4():
+  print largest_palindrome_product(3)
+
+
+
+
+
+
+
+def largest_palindrome_product(n):
+  return None
+
+
+
 def generate_primes(n):
   #function too slow
   primes = [2]
@@ -11,7 +30,7 @@ def generate_primes(n):
   return primes
         
 
-
+#problem 3
 def largest_prime_factor(n):
   primes= generate_primes(10000)
   primes.sort(reverse=True)
@@ -30,5 +49,7 @@ def prime_factors(n):
 
 
 #print largest_prime_factor(13195)
-print largest_prime_factor(600851475143)
 #print generate_primes(10000)
+
+
+
