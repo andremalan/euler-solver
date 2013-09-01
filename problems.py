@@ -68,20 +68,16 @@ def is_palindrome(n):
 
 
 
-#function too slow
 def generate_primes(n):
     primes = [2]
-    numbers = []
-    for i in range(0, n, 1):
-        numbers.append(True)
+    numbers = [False, True] * (n / 2)
     numbers[1] = False
-    for i in range(0, n, 2):
-        numbers[i] = False
     while primes[-1] < n:
         try:
             primes.append(numbers.index(True))
             for j in range(primes[-1], n, primes[-1]):
-                numbers[j] = False
+                if numbers[j]:
+                    numbers[j] = False
         except ValueError:
             return primes
     return primes
