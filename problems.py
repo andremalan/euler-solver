@@ -22,12 +22,17 @@ def problem5():
                 i+=1
     return total
 
-
-
-
 #problem 4
 
+def problem7():
+    #too slow, 12 seconds instead of 1
+    primes= generate_primes(104800)
+    print len(primes) 
+    return primes[10000]
 
+def problem8():
+    #pure guess
+    return 9*9*8*7*9
 #dumb way
 def largest_palindrome_product():
 
@@ -54,15 +59,20 @@ def is_palindrome(n):
 #function too slow
 def generate_primes(n):
     primes = [2]
-    for number in range(3,n):
-        is_prime = True 
-        for p in primes:
-            if number % p == 0:
-                is_prime = False
-        if is_prime:
-            primes.append(number)
+    numbers = []
+    for i in range(0, n, 1):
+        numbers.append(True)
+    numbers[1] = False
+    for i in range(0, n, 2):
+        numbers[i] = False
+    while primes[-1] < n:
+        try:
+            primes.append(numbers.index(True))
+            for j in range(primes[-1], n, primes[-1]):
+                numbers[j] = False
+        except ValueError:
+            return primes
     return primes
-
 
 #problem 3
 def largest_prime_factor(n):
